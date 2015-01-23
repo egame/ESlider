@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ESlider 图片轮播组件</title>
+<link href="./css/eslider.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/jquery.eslider.js"></script>
+<style type="text/css">
+*{margin:0;padding:0;}
+</style>
+</head>
+<body>
+<div class="w">
+
+    <h1>图片切换组件</h1>
+    <p>* 基于jquery</p>
+    <br/>
+    <br/>
+    <br/>
+    <div>
+        <h2>图片切换插件纵向</h2>
+        <div>$('#sliderBanner1').eslider({type: "v"});</div>
+        <div id="sliderBanner1" class="eg_slider">
+            <div class="fn_con con">
+                <div class="fn_con_item con_item">
+                    <img src="./other/banner1.jpg" alt="" />
+                </div>
+                <div class="fn_con_item con_item">
+                    <img src="./other/banner2.jpg" alt="" />
+                </div>
+                <div class="fn_con_item con_item">
+                    <img src="./other/banner3.jpg" alt="" />
+                </div>
+            </div>
+            <ul class="fn_tab_nav tab_nav">
+                <li class="fn_tab_item tab_item on">btn1</li>
+                <li class="fn_tab_item tab_item">btn2</li>
+                <li class="fn_tab_item tab_item">btn3</li>
+            </ul>
+            <a href="javascript:;" class="fn_pre btn_pre">上一张</a>
+            <a href="javascript:;" class="fn_next btn_next">下一张</a>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    
+    <div>
+        <h2>图片切换插件横向</h2>
+        <div>$('#sliderBanner2').eslider({type: "v"});</div>
+        <div id="sliderBanner2" class="eg_slider">
+            <div class="fn_con con">
+                <div class="fn_con_item con_item">
+                    <img src="./other/banner1.jpg" alt="" />
+                </div>
+                <div class="fn_con_item con_item">
+                    <img src="./other/banner2.jpg" alt="" />
+                </div>
+                <div class="fn_con_item con_item">
+                    <img src="./other/banner3.jpg" alt="" />
+                </div>
+            </div>
+            <ul class="fn_tab_nav tab_nav">
+                <li class="fn_tab_item tab_item on">btn1</li>
+                <li class="fn_tab_item tab_item">btn2</li>
+                <li class="fn_tab_item tab_item">btn3</li>
+            </ul>
+            <a href="javascript:;" class="fn_pre btn_pre">上一张</a>
+            <a href="javascript:;" class="fn_next btn_next">下一张</a>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    
+    <div>
+        <h2>图片切换插件 渐隐</h2>
+        <div>$('#sliderBanner3').eslider({type: "a"});</div>
+        <div id="sliderBanner3" class="eg_slider">
+            <div class="fn_con con">
+                <div class="fn_con_item con_item">
+                    <img src="./other/banner1.jpg" alt="" />
+                </div>
+                <div class="fn_con_item con_item">
+                    <img src="./other/banner2.jpg" alt="" />
+                </div>
+                <div class="fn_con_item con_item">
+                    <img src="./other/banner3.jpg" alt="" />
+                </div>
+            </div>
+            <ul class="fn_tab_nav tab_nav">
+                <li class="fn_tab_item tab_item on">btn1</li>
+                <li class="fn_tab_item tab_item">btn2</li>
+                <li class="fn_tab_item tab_item">btn3</li>
+            </ul>
+            <a href="javascript:;" class="fn_pre btn_pre">上一张</a>
+            <a href="javascript:;" class="fn_next btn_next">下一张</a>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+
+    <div>
+        <h2>图片切换插件 无动画 相当于tab切换</h2>
+        <div>$('#sliderBanner4').eslider({type: "n"});</div>
+        <div id="sliderBanner4" class="eg_slider">
+            <div class="fn_con con">
+                <div class="fn_con_item con_item">
+                    <img src="./other/banner1.jpg" alt="" />
+                </div>
+                <div class="fn_con_item con_item">
+                    <img src="./other/banner2.jpg" alt="" />
+                </div>
+                <div class="fn_con_item con_item">
+                    <img src="./other/banner3.jpg" alt="" />
+                </div>
+            </div>
+            <ul class="fn_tab_nav tab_nav">
+                <li class="fn_tab_item tab_item on">btn1</li>
+                <li class="fn_tab_item tab_item">btn2</li>
+                <li class="fn_tab_item tab_item">btn3</li>
+            </ul>
+            <a href="javascript:;" class="fn_pre btn_pre">上一张</a>
+            <a href="javascript:;" class="fn_next btn_next">下一张</a>
+        </div>
+    </div>
+    
+</div>
+
+<script type="text/javascript">
+    $('#sliderBanner1').eslider({
+        //按钮包裹元素
+        tabBox: ".fn_tab_nav",
+        //按钮元素
+        tabItem: ".fn_tab_item",
+        //上一页
+        btnPre: ".fn_pre",
+        //下一页
+        btnNext: ".fn_next",
+        //内容包裹元素
+        conBox: ".fn_con",
+        //内容元素
+        conItem: ".fn_con_item",
+        //tab选中样式名
+        tabOnClass: "on",
+        //切换类型v(纵向)\h(横向)\a(透明度)\n(无效果)
+        type: "h",
+        //触发事件
+        ev: "mouseover",
+        //是否自动切换 true\false
+        auto: true,
+        //动画速度
+        speed: 500,
+        //切换时间
+        time: 4000,
+        //切换动画效果
+        easing : 'easeOutQuad',//swing,linear,easeOutQuad
+        //跳转到对应图片后回调，返回当前索引值及顶级包裹元素对象
+        callback: function(index, obj){
+            //console.log(index);
+        }
+    });   
+    $('#sliderBanner2').eslider({type: "v"});   
+    $('#sliderBanner3').eslider({type: "a"});   
+    $('#sliderBanner4').eslider({type: "n"});   
+
+</script>
+</body>
+</html>

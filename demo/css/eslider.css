@@ -1,0 +1,86 @@
+/*图片轮播*/
+.eg_slider{
+    position:relative;
+    width:600px;
+}
+.eg_slider .con{
+    /*
+     * 功能性样式
+     * position:relative[absolute]
+     * overflow:hidden(固定值不可变)
+     * width/height(必填)
+     * */
+    position:relative;
+    overflow:hidden;
+    width:600px;
+    height:350px;
+}
+.eg_slider .con_item{
+    /*功能性样式*/
+    height:100%;
+}
+.eg_slider .con img{
+    /*功能性样式*/
+    width:100%;
+    height:100%;
+}
+.eg_slider .con_item{
+    /*
+     * 功能性样式
+     * float:left;(固定值不可变)
+     * */
+    float:left;
+}
+.eg_slider .tab_nav{
+    /*自定义样式*/
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+}
+.eg_slider .tab_nav .tab_item{
+    /*自定义样式*/
+    float: left;
+    margin-left: 5px;
+    width: 9px;
+    height: 9px;
+    margin-top: 1px;
+    font-size: 0;
+    text-indent: -9999px;
+    border: 1px solid #FFF;
+    background: #FFF;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.eg_slider .tab_nav .on{
+    /*自定义样式*/
+    width: 10px;
+    height: 10px;
+    margin-top: 0;
+    background: #ff8706;
+}
+.eg_slider .btn_pre, .eg_slider .btn_next{
+    /*自定义样式*/
+    overflow: hidden;
+    position: absolute;
+    top:50%;
+    margin-top:-33px;
+    width: 37px;
+    height: 75px;
+    text-indent: -9999em;
+    background: url(../img/btns_control.png)  no-repeat;
+}
+.eg_slider .btn_pre{
+    /*自定义样式*/
+    left:0;
+    background-position: right 0;
+}
+.eg_slider .btn_next{
+    /*自定义样式*/
+    right:0;
+}
+
+
+
+
+
