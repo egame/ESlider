@@ -8,3 +8,6 @@
 .eg_slider .btn_next,.eg_slider .btn_pre{overflow:hidden;position:absolute;top:50%;margin-top:-33px;width:37px;height:75px;text-indent:-9999em;background:url(../img/btns_control.png) no-repeat}
 .eg_slider .btn_pre{left:0;background-position:right 0}
 .eg_slider .btn_next{right:0}
+.eg_slider .tips_con{position:absolute;left:0;bottom:0;width:100%;height:40px}
+.eg_slider .tips_con .tips_tt{position:relative;color:#FFF;overflow:hidden;height:100%;line-height:40px;width:90%;text-indent:10px}
+.eg_slider .tips_con .tips_bg{position:absolute;left:0;bottom:0;width:100%;height:100%;background:#000;opacity:.6}
