@@ -24,22 +24,15 @@
         <div id="sliderBanner1" class="eg_slider">
             <div class="fn_con con">
                 <div class="fn_con_item con_item">
-                    <img src="./other/banner1.jpg" alt="" />
+                    <img src="./other/banner1.jpg" title="影之刃静态电影首发 颠覆武侠1" alt="" />
                 </div>
                 <div class="fn_con_item con_item">
-                    <img src="./other/banner2.jpg" alt="" />
+                    <img src="./other/banner2.jpg" title="影之刃静态电影首发 颠覆武侠2" alt="" />
                 </div>
                 <div class="fn_con_item con_item">
-                    <img src="./other/banner3.jpg" alt="" />
+                    <img src="./other/banner3.jpg" title="影之刃静态电影首发 颠覆武侠3" alt="" />
                 </div>
             </div>
-            <ul class="fn_tab_nav tab_nav">
-                <li class="fn_tab_item tab_item on">btn1</li>
-                <li class="fn_tab_item tab_item">btn2</li>
-                <li class="fn_tab_item tab_item">btn3</li>
-            </ul>
-            <a href="javascript:;" class="fn_pre btn_pre">上一张</a>
-            <a href="javascript:;" class="fn_next btn_next">下一张</a>
         </div>
     </div>
     <br/>
@@ -52,22 +45,15 @@
         <div id="sliderBanner2" class="eg_slider">
             <div class="fn_con con">
                 <div class="fn_con_item con_item">
-                    <img src="./other/banner1.jpg" alt="" />
+                    <img src="./other/banner1.jpg" title="影之刃静态电影首发 颠覆武侠1" alt="" />
                 </div>
                 <div class="fn_con_item con_item">
-                    <img src="./other/banner2.jpg" alt="" />
+                    <img src="./other/banner2.jpg" title="影之刃静态电影首发 颠覆武侠2" alt="" />
                 </div>
                 <div class="fn_con_item con_item">
-                    <img src="./other/banner3.jpg" alt="" />
+                    <img src="./other/banner3.jpg" title="影之刃静态电影首发 颠覆武侠3" alt="" />
                 </div>
             </div>
-            <ul class="fn_tab_nav tab_nav">
-                <li class="fn_tab_item tab_item on">btn1</li>
-                <li class="fn_tab_item tab_item">btn2</li>
-                <li class="fn_tab_item tab_item">btn3</li>
-            </ul>
-            <a href="javascript:;" class="fn_pre btn_pre">上一张</a>
-            <a href="javascript:;" class="fn_next btn_next">下一张</a>
         </div>
     </div>
     <br/>
@@ -80,22 +66,15 @@
         <div id="sliderBanner3" class="eg_slider">
             <div class="fn_con con">
                 <div class="fn_con_item con_item">
-                    <img src="./other/banner1.jpg" alt="" />
+                    <img src="./other/banner1.jpg" title="影之刃静态电影首发 颠覆武侠1" alt="" />
                 </div>
                 <div class="fn_con_item con_item">
-                    <img src="./other/banner2.jpg" alt="" />
+                    <img src="./other/banner2.jpg" title="影之刃静态电影首发 颠覆武侠2" alt="" />
                 </div>
                 <div class="fn_con_item con_item">
-                    <img src="./other/banner3.jpg" alt="" />
+                    <img src="./other/banner3.jpg" title="影之刃静态电影首发 颠覆武侠3" alt="" />
                 </div>
             </div>
-            <ul class="fn_tab_nav tab_nav">
-                <li class="fn_tab_item tab_item on">btn1</li>
-                <li class="fn_tab_item tab_item">btn2</li>
-                <li class="fn_tab_item tab_item">btn3</li>
-            </ul>
-            <a href="javascript:;" class="fn_pre btn_pre">上一张</a>
-            <a href="javascript:;" class="fn_next btn_next">下一张</a>
         </div>
     </div>
     <br/>
@@ -108,22 +87,15 @@
         <div id="sliderBanner4" class="eg_slider">
             <div class="fn_con con">
                 <div class="fn_con_item con_item">
-                    <img src="./other/banner1.jpg" alt="" />
+                    <img src="./other/banner1.jpg" title="影之刃静态电影首发 颠覆武侠1" alt="" />
                 </div>
                 <div class="fn_con_item con_item">
-                    <img src="./other/banner2.jpg" alt="" />
+                    <img src="./other/banner2.jpg" title="影之刃静态电影首发 颠覆武侠2" alt="" />
                 </div>
                 <div class="fn_con_item con_item">
-                    <img src="./other/banner3.jpg" alt="" />
+                    <img src="./other/banner3.jpg" title="影之刃静态电影首发 颠覆武侠3" alt="" />
                 </div>
             </div>
-            <ul class="fn_tab_nav tab_nav">
-                <li class="fn_tab_item tab_item on">btn1</li>
-                <li class="fn_tab_item tab_item">btn2</li>
-                <li class="fn_tab_item tab_item">btn3</li>
-            </ul>
-            <a href="javascript:;" class="fn_pre btn_pre">上一张</a>
-            <a href="javascript:;" class="fn_next btn_next">下一张</a>
         </div>
     </div>
     
@@ -131,17 +103,9 @@
 
 <script type="text/javascript">
     $('#sliderBanner1').eslider({
-        //按钮包裹元素
-        tabBox: ".fn_tab_nav",
-        //按钮元素
-        tabItem: ".fn_tab_item",
-        //上一页
-        btnPre: ".fn_pre",
-        //下一页
-        btnNext: ".fn_next",
-        //内容包裹元素
+        //内容包裹元素选择器
         conBox: ".fn_con",
-        //内容元素
+        //内容元素选择器
         conItem: ".fn_con_item",
         //tab选中样式名
         tabOnClass: "on",
@@ -149,6 +113,10 @@
         type: "h",
         //触发事件
         ev: "mouseover",
+        //隐藏标题栏
+        hideTitleBar: false,
+        //隐藏前进\后退按钮
+        hideBtn: false,
         //延迟触发时长，事件为mouseover时启用，防止切换按钮误触
         hoverDelay: 50,
         //是否自动切换 true\false
@@ -157,12 +125,10 @@
         speed: 500,
         //切换时间
         time: 4000,
-        //切换动画效果
-        easing : 'easeOutQuad',//swing,linear,easeOutQuad
+        //切换动画效果 swing,linear,easeOutQuad
+        easing : 'easeOutQuad',
         //跳转到对应图片后回调，返回当前索引值及顶级包裹元素对象
-        callback: function(index, obj){
-            //console.log(index);
-        }
+        callback: null
     });   
     $('#sliderBanner2').eslider({type: "v"});   
     $('#sliderBanner3').eslider({type: "a"});   
