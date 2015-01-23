@@ -103,8 +103,7 @@
                         Jcons.eq(curI).show().fadeOut(opts.speed);
                     break;
                     case 'n':
-                        var l = - (index * unitH);
-                        JconInner.css({top: l + "px"});
+                        Jcons.hide().eq(index).show();
                     break;
                     default:
                         isMoving = true;
@@ -121,8 +120,8 @@
                 }
             };
 
-            //延迟触发
             if (opts.ev == 'mouseover') {
+                //延迟触发
                 Jtabs.hover(function(){
                     var i = $(this).index();
                     clearTimeout(delayTime);
@@ -187,6 +186,8 @@
         type: "h",
         //触发事件
         ev: "mouseover",
+        //延迟触发时长，事件为mouseover时启用，防止切换按钮误触
+        hoverDelay: 50,
         //是否自动切换 true\false
         auto: true,
         //动画速度
