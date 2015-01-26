@@ -4,7 +4,6 @@ https://github.com/egame/ESlider
 ## 简介
 * 基于jquery的图片轮播组件
 * 不做大而全，只做网站最最常用的几组效果
-* 自定义性强，对html结构要求不高
 * 提供回调函数方便扩充特殊需求
 * 高度可配置
 
@@ -14,17 +13,9 @@ https://github.com/egame/ESlider
 附上初始化代码：
 ```js 
 $('#sliderBanner1').eslider({
-    //按钮包裹元素
-    tabBox: ".fn_tab_nav",
-    //按钮元素
-    tabItem: ".fn_tab_item",
-    //上一页
-    btnPre: ".fn_pre",
-    //下一页
-    btnNext: ".fn_next",
-    //内容包裹元素
+    //内容包裹元素选择器
     conBox: ".fn_con",
-    //内容元素
+    //内容元素选择器
     conItem: ".fn_con_item",
     //tab选中样式名
     tabOnClass: "on",
@@ -32,14 +23,20 @@ $('#sliderBanner1').eslider({
     type: "h",
     //触发事件
     ev: "mouseover",
+    //隐藏标题栏
+    hideTitleBar: false,
+    //隐藏前进\后退按钮
+    hideBtn: false,
+    //延迟触发时长，事件为mouseover时启用，防止切换按钮误触
+    hoverDelay: 50,
     //是否自动切换 true\false
     auto: true,
     //动画速度
     speed: 500,
     //切换时间
     time: 4000,
-    //切换动画效果
-    easing : 'easeOutQuad',//swing,linear,easeOutQuad
+    //切换动画效果 swing,linear,easeOutQuad
+    easing : 'easeOutQuad',
     //跳转到对应图片后回调，返回当前索引值及顶级包裹元素对象
     callback: function(index, obj){
         //console.log(index);
