@@ -4,23 +4,72 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ESlider 图片轮播组件</title>
 <link href="./css/eslider.css" rel="stylesheet" type="text/css" />
+<link href="./js/lib/syntaxhighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="./js/lib/syntaxhighlighter/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./js/lib/syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="./js/lib/syntaxhighlighter/scripts/shBrushJScript.js"></script>
 <script type="text/javascript" src="./js/lib/jquery.js"></script>
 <script type="text/javascript" src="./js/normal/jquery.eslider.js"></script>
 <style type="text/css">
 *{margin:0;padding:0;}
 </style>
+<script type="text/javascript">
+		SyntaxHighlighter.config.clipboardSwf = './js/lib/syntaxhighlighter/scripts/clipboard.swf';
+		SyntaxHighlighter.all();
+</script>
+
 </head>
 <body>
 <div class="w">
 
     <h1>图片切换组件</h1>
     <p>* 基于jquery</p>
+    <p>* 默认参数</p>
+    <pre class="brush: jscript;">
+    // 默认参数
+    $.eslider.defaults = {    
+        //命名空间
+        namespace: 'es',
+        //内容包裹元素选择器
+        conBox: '.fn_con',
+        //内容元素选择器 [内容元素不能与其它元素混合处于同一父元素内]
+        conItem: '.fn_con_item',
+        //tab选中样式名
+        tabOnClass: 'es_tab_item_on',
+        //切换类型v(纵向)\h(横向)\a(透明度)\n(无效果)
+        type: 'h',
+        //boolean:是否循环展示
+        animationLoop: true,
+        //触发事件
+        ev: 'mouseover',
+        //隐藏标题栏
+        hideTitleBar: false,
+        //前进\后退按钮显示方式  1[自动隐藏]，2[始终显示]，3[始终隐藏]
+        showBtn: 1,
+        //延迟触发时长，事件为mouseover时启用，防止切换按钮误触
+        hoverDelay: 50,
+        //是否自动切换 true\false
+        auto: true,
+        //动画速度
+        speed: 500,
+        //切换时间
+        time: 4000,
+        //切换缓动效果 swing,linear,easeOutQuad
+        easing : 'easeOutQuad',
+        //跳转到对应图片前调用，返回当前索引值及顶级包裹元素对象
+        before: null,
+        //跳转到对应图片后回调，返回当前索引值及顶级包裹元素对象
+        after: null
+    };     
+   </pre> 
     <br/>
     <br/>
     <br/>
     <div>
-        <h2>图片切换插件纵向</h2>
-        <div>$('#sliderBanner1').eslider({type: "v"});</div>
+        <h2>图片切换插件横向</h2>
+        <pre class="brush: jscript;">
+            $('#sliderBanner1').eslider({type: "v"});
+        </pre>
         <div id="sliderBanner1" class="eg_slider">
             <div class="fn_con con">
                 <div class="fn_con_item con_item">
@@ -40,8 +89,13 @@
     <br/>
     
     <div>
-        <h2>图片切换插件横向</h2>
-        <div>$('#sliderBanner2').eslider({type: "v"});</div>
+        <h2>图片切换插件纵向</h2>
+        <pre class="brush: jscript;">
+    $('#sliderBanner2').eslider({
+        type: "v",
+        animationLoop: false
+    });   
+        </pre>
         <div id="sliderBanner2" class="eg_slider">
             <div class="fn_con con">
                 <div class="fn_con_item con_item">
@@ -62,7 +116,9 @@
     
     <div>
         <h2>图片切换插件 渐隐</h2>
-        <div>$('#sliderBanner3').eslider({type: "a"});</div>
+        <pre class="brush: jscript;">
+            $('#sliderBanner3').eslider({type: "a"});
+        </pre>
         <div id="sliderBanner3" class="eg_slider">
             <div class="fn_con con">
                 <div class="fn_con_item con_item">
@@ -82,8 +138,10 @@
     <br/>
 
     <div>
-        <h2>图片切换插件 无动画 相当于tab切换</h2>
-        <div>$('#sliderBanner4').eslider({type: "n"});</div>
+        <h2>图片切换插件 无动画</h2>
+        <pre class="brush: jscript;">
+            $('#sliderBanner4').eslider({type: "n"});
+        </pre>
         <div id="sliderBanner4" class="eg_slider">
             <div class="fn_con con">
                 <div class="fn_con_item con_item">
@@ -98,41 +156,68 @@
             </div>
         </div>
     </div>
+    <br/>
+    <br/>
+    <br/>
+
+    <div>
+        <h2>图片切换插件 tab切换</h2>
+        <div></div>
+        <pre class="brush: jscript;">
+            //自定义切换按钮
+            function myTabInit(){
+                var slider5 = $('#sliderBanner5').eslider({ev: 'myevent', auto: false, type: 'n', showBtn:3, hideTitleBar: true});   
+                $('#sliderBanner5 .mytab .item').click(function(){
+                    slider5.go2con($(this).index());
+                })
+            }
+            myTabInit();
+        </pre>
+        <div id="sliderBanner5" >
+            <div class="mytab">
+                <a href="javascript:;" class="item">tab1</a>
+                <a href="javascript:;" class="item">tab2</a>
+                <a href="javascript:;" class="item">tab3</a>
+            </div>
+            <div class="fn_con con">
+                <div class="fn_con_item con_item">
+                    1111
+                    <img src="./other/banner1.jpg" title="影之刃静态电影首发 颠覆武侠1" alt="" />
+                </div>
+                <div class="fn_con_item con_item" style="display:none">
+                    2222
+                    <img src="./other/banner2.jpg" title="影之刃静态电影首发 颠覆武侠2" alt="" />
+                </div>
+                <div class="fn_con_item con_item" style="display:none">
+                    3333
+                    <img src="./other/banner3.jpg" title="影之刃静态电影首发 颠覆武侠3" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
     
 </div>
 
 <script type="text/javascript">
-    $('#sliderBanner1').eslider({
-        //内容包裹元素选择器
-        conBox: ".fn_con",
-        //内容元素选择器
-        conItem: ".fn_con_item",
-        //tab选中样式名
-        tabOnClass: "on",
-        //切换类型v(纵向)\h(横向)\a(透明度)\n(无效果)
-        type: "h",
-        //触发事件
-        ev: "mouseover",
-        //隐藏标题栏
-        hideTitleBar: false,
-        //隐藏前进\后退按钮
-        hideBtn: false,
-        //延迟触发时长，事件为mouseover时启用，防止切换按钮误触
-        hoverDelay: 50,
-        //是否自动切换 true\false
-        auto: true,
-        //动画速度
-        speed: 500,
-        //切换时间
-        time: 4000,
-        //切换动画效果 swing,linear,easeOutQuad
-        easing : 'easeOutQuad',
-        //跳转到对应图片后回调，返回当前索引值及顶级包裹元素对象
-        callback: null
+    $('#sliderBanner1').eslider();
+    $('#sliderBanner2').eslider({
+        type: "v",
+        animationLoop: false
     });   
-    $('#sliderBanner2').eslider({type: "v"});   
     $('#sliderBanner3').eslider({type: "a"});   
     $('#sliderBanner4').eslider({type: "n"});   
+
+    //自定义切换按钮 实现tab切换
+    function myTabInit(slector){
+        var slider5 = $(slector).eslider({ev: 'myevent', auto: false, type: 'n', showBtn:3, hideTitleBar: true});   
+        $('#sliderBanner5 .mytab .item').click(function(){
+            slider5.go2con($(this).index());
+        })
+    }
+    myTabInit('#sliderBanner5');
 
 </script>
 </body>
